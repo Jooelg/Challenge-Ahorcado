@@ -1,0 +1,387 @@
+:root {
+	--color1: #E9ECF8;
+	--color2: #0A3871;
+}
+
+body {
+	background-color: var(--color1);
+	height: 100vh;
+	width: 100%;
+}
+
+.header {
+	width: 100%;
+	height: 4rem;
+}
+
+.logo {
+	padding: 1rem;
+}
+.section{
+	height:inherit;
+	width: inherit;
+}
+
+.gameIlustration {
+	margin: 1rem auto;
+	padding: 1rem;
+	width: max-content;
+	fill: var(--color2)
+}
+
+.gameIlustration svg {
+	height: 10rem;
+	width: auto;
+}
+
+.btn {
+	display: block;
+	margin: 0 auto;
+	border: medium solid var(--color2);
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	border-radius: 2rem;
+	font-size: 1.5rem;
+}
+
+.game-word {
+	margin: 0 auto;
+	margin-top: 6rem;
+
+}
+
+.save-cancel {
+	margin: 0 auto;
+	margin-top: 1rem;
+}
+
+.NewGame,
+.Save,
+.Restart {
+	padding: 2rem;
+	background-color: var(--color2);
+	color: white;
+	margin-bottom: 2rem;
+}
+
+.NewGame:hover,
+.Save:hover,
+.Restart:hover {
+	filter: saturate(2)
+}
+
+.NewWord,
+.Cancel,
+.Surrender {
+	padding: 2rem;
+	color: var(--color2);
+}
+
+.footer {
+	position: sticky;
+	left: 0;
+	width: 100%;
+	height: 2rem;
+	text-align: center;
+	background-color: var(--color2);
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.footer a {
+	color: white;
+	text-decoration: none;
+}
+
+
+.textarea {
+	margin: 2rem auto;
+	width: 80vw;
+	margin-bottom: 3rem;
+}
+
+.textarea .text {
+	width: 100%;
+	height: 4rem;
+	resize: none;
+	font-size: 2rem;
+	background-color: var(--color1);
+	border: medium solid var(--color2);
+}
+
+.none {
+	display: none;
+}
+
+.text-error {
+	margin-top: -0.5rem;
+	font-size: 2rem;
+	background-color: var(--color2);
+	color: #fff;
+	transition: all 500ms ease;
+}
+
+.text-error.is-active {
+	display: block;
+	animation: show-message 1s 1 normal 0s ease-out both;
+}
+
+@keyframes show-message {
+	0% {
+		visibility: hidden;
+		opacity: 0;
+	}
+
+	100% {
+		visibility: visible;
+		opacity: 1;
+	}
+
+}
+
+.Hanged {
+	width: max-content;
+	margin: 0 auto;
+}
+.Hanged svg{
+    height: 30vh;
+    width: auto;
+}
+
+
+.word {
+	margin: 3rem auto 0 auto;
+	width: max-content;
+	text-align: justify;
+}
+
+.word * {
+	margin: 1rem auto;
+}
+
+.lines {
+	margin: 0 auto;
+	width: 30%;
+	text-align: justify;
+}
+
+.letter {
+	margin: 0 0.5rem;
+	font-size: 1.5rem;
+	border-bottom: thin solid var(--color2);
+	color: transparent;
+	user-select: none;
+}
+
+.letter2 {
+	margin: 0 0.5rem;
+	font-size: 1.5rem;
+	color: var(--color2);
+	user-select: none;
+}
+
+.letterguessed {
+	color: var(--color2);
+}
+.letterguessed::selection{
+    color: var(--color2);
+}
+
+.modal {
+	position: fixed;
+	z-index: 999;
+	top: 10rem;
+	left: 0;
+	right: 0;
+    opacity: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: transparent;
+	pointer-events: none;
+	transition: all 300ms ease-in-out;
+}
+
+.modal-content {
+	position: relative;
+}
+
+.modal-active {
+	opacity: 1;
+}
+
+.finishMessage {
+	padding: 1rem;
+	width: max-content;
+	text-align: center;
+	font-size: 1.5rem;
+	color: var(--color2);
+	background-color: var(--color1);
+	border: thin solid var(--color2);
+	border-radius: 2rem;
+}
+
+.disabled {
+	cursor: default;
+}
+
+.disabled:hover {
+	filter: saturate(1);
+}
+
+.shake {
+	animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+	transform: translate3d(0, 0, 0);
+	backface-visibility: hidden;
+	perspective: 1000px;
+}
+
+@keyframes shake {
+
+	10%,
+	90% {
+		transform: translate3d(-1px, 0, 0);
+	}
+
+	20%,
+	80% {
+		transform: translate3d(2px, 0, 0);
+	}
+
+	30%,
+	50%,
+	70% {
+		transform: translate3d(-4px, 0, 0);
+	}
+
+	40%,
+	60% {
+		transform: translate3d(4px, 0, 0);
+	}
+}
+
+.focus {
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	position: absolute;
+	margin: 0 auto;
+	align-items: center;
+	color: transparent;
+	background-color: transparent; 
+	border-style: none;
+	border: none;
+	cursor: default;
+	resize: none;
+	text-decoration: none;
+}
+
+.focus:hover {
+	color: transparent;
+	background-color: transparent;
+	border: none;
+}
+.focus:focus{
+	color: transparent;
+	background-color: transparent;
+	border: none;
+}
+
+@media screen and (min-width:48rem) {
+    .gameIlustration{
+        width: max-content;
+        height: auto;
+    }
+	.gameIlustration svg {
+		height: 30vh;
+        width: auto;
+	}
+
+	.btns {
+		padding: 3rem;
+	}
+
+	.btn {
+		padding: 2rem;
+		font-size: 2rem;
+		margin: 0 auto;
+		margin-bottom: 4rem;
+	}
+
+	.NewGame,
+	.NewWord {
+		margin: 2rem auto;
+	}
+
+	.save-cancel {
+		margin: 2rem auto;
+	}
+}
+
+@media screen and (min-width: 64rem) {
+    .gameIlustration{
+        width: max-content;
+        height: auto;
+    }
+	.gameIlustration svg {
+		height: 30vh;
+        width: auto;
+	}
+    .flex{
+        display: flex;
+        flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+    }
+
+	.btns {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+
+	.NewGame,
+	.NewWord,
+	.Restart {
+		width: 40vw;
+		height: 15vh;
+	}
+
+	.save-cancel {
+		justify-content: space-around;
+	}
+
+	.Save,
+	.Cancel,
+	.Surrender {
+		width: 25vw;
+		height: 15vh;
+	}
+
+	.Hanged {
+        padding: 1rem;
+		height: max-content;
+		width: max-content;
+	}
+
+	.Hanged svg {
+		height: 45vh;
+		width: auto;
+	}
+
+	.letter,
+	.letter2 {
+		font-size: 3rem !important;
+	}
+
+}
