@@ -17,8 +17,9 @@ body {
 .logo {
 	padding: 1rem;
 }
-.section{
-	height:inherit;
+
+.section {
+	height: inherit;
 	width: inherit;
 }
 
@@ -149,9 +150,10 @@ body {
 	width: max-content;
 	margin: 0 auto;
 }
-.Hanged svg{
-    height: 30vh;
-    width: auto;
+
+.Hanged svg {
+	height: 30vh;
+	width: auto;
 }
 
 
@@ -189,8 +191,9 @@ body {
 .letterguessed {
 	color: var(--color2);
 }
-.letterguessed::selection{
-    color: var(--color2);
+
+.letterguessed::selection {
+	color: var(--color2);
 }
 
 .modal {
@@ -199,7 +202,7 @@ body {
 	top: 10rem;
 	left: 0;
 	right: 0;
-    opacity: 0;
+	opacity: 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -271,7 +274,7 @@ body {
 	top: -100%;
 	margin: 0 auto;
 	color: transparent;
-	background-color: transparent; 
+	background-color: transparent;
 	border-style: none;
 	border: none;
 	cursor: default;
@@ -285,20 +288,22 @@ body {
 	background-color: transparent;
 	border: none;
 }
-.focus:focus{
+
+.focus:focus {
 	color: transparent;
 	background-color: transparent;
 	border: none;
 }
 
 @media screen and (min-width:48rem) {
-    .gameIlustration{
-        width: max-content;
-        height: auto;
-    }
+	.gameIlustration {
+		width: max-content;
+		height: auto;
+	}
+
 	.gameIlustration svg {
 		height: 30vh;
-        width: auto;
+		width: auto;
 	}
 
 	.btns {
@@ -323,21 +328,23 @@ body {
 }
 
 @media screen and (min-width: 64rem) {
-    .gameIlustration{
-        width: max-content;
-        height: auto;
-    }
+	.gameIlustration {
+		width: max-content;
+		height: auto;
+	}
+
 	.gameIlustration svg {
 		height: 30vh;
-        width: auto;
+		width: auto;
 	}
-    .flex{
-        display: flex;
-        flex-direction: row;
+
+	.flex {
+		display: flex;
+		flex-direction: row;
 		justify-content: center;
 		align-items: center;
 		text-align: center;
-    }
+	}
 
 	.btns {
 		display: flex;
@@ -366,7 +373,7 @@ body {
 	}
 
 	.Hanged {
-        padding: 1rem;
+		padding: 1rem;
 		height: max-content;
 		width: max-content;
 	}

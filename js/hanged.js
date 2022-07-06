@@ -125,6 +125,7 @@ function game() {
   let y = 0;
   let $goodLetters = [];
   let $badLetters = [];
+
   $focus.focus();
   $focus.click();
 
@@ -258,7 +259,7 @@ function game() {
     return new Promise((resolve) => {
       setTimeout(() => {
         resolve(true);
-      }, 5000);
+      }, 3000);
     });
   }
 }
