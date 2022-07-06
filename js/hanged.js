@@ -16,7 +16,8 @@ const $firstPage = d.querySelector(".first-page"),
   $modal = d.querySelector(".modal"),
   $finishMessage = d.querySelector(".finishMessage"),
   $body = d.querySelectorAll(".body"),
-  $focus = d.querySelector(".focus");
+  $focus = d.querySelector(".focus"),
+  $flex = d.querySelector(".flex");
 
 $btnPlay.addEventListener("click", (e) => {
   play();
@@ -34,6 +35,10 @@ $btnCancel.addEventListener("click", (e) => {
 });
 $btnRestart.addEventListener("click", (e) => {
   restart();
+});
+$flex.addEventListener("click", (e) => {
+  $focus.focus();
+  $focus.click();
 });
 
 function play() {

@@ -273,7 +273,6 @@ body {
 	right: 0;
 	position: absolute;
 	margin: 0 auto;
-	align-items: center;
 	color: transparent;
 	background-color: transparent; 
 	border-style: none;
@@ -281,6 +280,7 @@ body {
 	cursor: default;
 	resize: none;
 	text-decoration: none;
+	pointer-events: none;
 }
 
 .focus:hover {
