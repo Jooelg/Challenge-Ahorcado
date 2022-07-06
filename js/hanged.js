@@ -36,10 +36,6 @@ $btnCancel.addEventListener("click", (e) => {
 $btnRestart.addEventListener("click", (e) => {
   restart();
 });
-$flex.addEventListener("click", (e) => {
-  $focus.focus();
-  $focus.click();
-});
 
 function play() {
   $firstPage.classList.add("none");
@@ -213,12 +209,20 @@ function game() {
     }
   }
 
+  $flex.addEventListener("click", textAvailable);
+
+  function textAvailable(e) {
+    $focus.focus();
+    $focus.click();
+  }
+
   $btnSurrender.addEventListener("click", (e) => {
     lose();
     finish();
   });
 
   function win() {
+    $flex.removeEventListener("click", textAvailable);
     $modal.classList.add("modal-active");
     $finishMessage.textContent = "GANASTE";
     $btnSurrender.setAttribute("disabled", true);
@@ -226,6 +230,7 @@ function game() {
   }
 
   function lose() {
+    $flex.removeEventListener("click", textAvailable);
     $list.forEach((element) => {
       element.classList.add("letterguessed");
     });
